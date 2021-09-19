@@ -35,4 +35,8 @@ models:
   sensor_data_viz:
       # Applies to all files under models/example/
       example:
-          materialized: view
+          +materialized: view
+      snowflake_competency_source:
+          +materialized: table
+          +schema: stagging
+        

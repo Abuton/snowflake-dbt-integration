@@ -7,5 +7,13 @@ sources:
     tables:
       - name: dimStationSummary
         description: 'Summary Stats about different stations in the davis region'
+        columns:
+          - name: station_id
+            description: unique customer id
+            tests:
+              - unique
+              - not_null
+
       - name: dimStation
         description: 'Information about each station'
+

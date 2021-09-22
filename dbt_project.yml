@@ -34,9 +34,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   sensor_data_viz:
       # Applies to all files under models/example/
-      example:
-          +materialized: view
-      snowflake_competency_source:
+      stagging:
           +materialized: table
-          +schema: stagging
+          +schema: Sensor_DW
         

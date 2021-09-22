@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: stationSummary
+    description: 'A Table that stores summary statistics about each station in the dataset'
+    schema: Sensor_DW
+    tables:
+      - name: dimStationSummary
+        description: 'Summary Stats about different stations in the davis region'
+      - name: dimStation
+        description: 'Information about each station'

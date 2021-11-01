@@ -8,11 +8,11 @@ from snowflake.connector.pandas_tools import write_pandas
 ## Phase I: Truncate/Delete the current data in the table
 # The connector...
 conn = snow.connect(user="abuton",
-   password="Jimohm@ryam1",
-   account="ez30284.us-central1.gcp",
-   warehouse="compute_wh",
-   database="competency",
-   schema="trainees")
+   password="mypass",
+   account="myaccounnt.us-central1.gcp",
+   warehouse="mywarehouse",
+   database="db",
+   schema="schema_db")
 
 # Create a cursor object.
 cur = conn.cursor()
@@ -32,14 +32,14 @@ delimiter = ","
 df = pd.read_csv(original, sep = delimiter)
 
 # Actually write to the table in snowflake.
-write_pandas(conn, df, "COMPETENCY_SCORE")
+write_pandas(conn, df, "table")
 print('data loaded to snowflake successfully')
 
 # Create a cursor object.
 cur = conn.cursor()
 
 # Execute a statement that will turn the warehouse off.
-sql = "ALTER WAREHOUSE compute_wh SUSPEND"
+sql = "ALTER WAREHOUSE mywarehouse SUSPEND"
 cur.execute(sql)
 
 # Close your cursor and your connection.

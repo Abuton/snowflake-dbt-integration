@@ -1,8 +1,10 @@
 # snowflake-dbt-integration
 
 Try running the following commands:
-- dbt run
-- dbt test
+- dbt debug : Test connection 
+- dbt run: run all model 
+- dbt test : check all test return 0 
+- dbt generate docs : generate documentation for your models 
 
 
 ### Resources:
